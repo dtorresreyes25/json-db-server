@@ -1,2 +1,2 @@
-# json-server-db
+# json-db-server
 Fake API REST
