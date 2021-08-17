@@ -3,6 +3,7 @@ var faker = require("faker");
 function generateCaseStudies() {
   var cases = [];
   for (let i = 0; i <= 20; i++) {
+    var id = faker.datatype.uuid();
     var title = faker.lorem.words();
     var location = faker.address.city();
     var picture = `${faker.image.nature()}?random=${Math.round(
@@ -17,6 +18,7 @@ function generateCaseStudies() {
       });
 
     cases.push({
+      id,
       title,
       location,
       picture,
