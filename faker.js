@@ -5,7 +5,9 @@ function generateCaseStudies() {
   for (let i = 0; i <= 20; i++) {
     var title = faker.lorem.words();
     var location = faker.address.city();
-    var picture = faker.image.city();
+    var picture = `${faker.image.nature()}?random=${Math.round(
+      Math.random() * 1000
+    )}`;
     var description = "";
 
     Array(10)
