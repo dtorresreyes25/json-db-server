@@ -35,6 +35,7 @@ function generatePosts() {
     var title = faker.lorem.words();
     var author = faker.fake("{{name.lastName}}, {{name.firstName}}");
     var location = faker.address.city();
+    var date = faker.date.recent();
     var picture = `${faker.image.city()}?random=${Math.round(
       Math.random() * 1000
     )}`;
@@ -50,6 +51,7 @@ function generatePosts() {
       id,
       title,
       author,
+      date,
       location,
       picture,
       description,
