@@ -49,6 +49,7 @@ function generatePosts() {
     posts.push({
       id,
       title,
+      author,
       location,
       picture,
       description,
