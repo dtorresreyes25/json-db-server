@@ -29,9 +29,9 @@ function generateCasesStudies() {
 }
 
 function generatePosts() {
-  var random = Math.round(Math.random() * 1000);
   var posts = [];
   for (let i = 0; i <= 20; i++) {
+    var random = Math.round(Math.random() * 1000);
     var id = faker.datatype.uuid();
     var title = faker.lorem.words();
     var author = faker.fake("{{name.lastName}}, {{name.firstName}}");
