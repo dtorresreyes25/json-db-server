@@ -1,8 +1,8 @@
 var faker = require("faker");
 
-function generateCasesStudies(){
-    const cases = [];
-	 for (let i = 0; i <= 20; i++) {
+function generateCasesStudies() {
+  const cases = [];
+  for (let i = 0; i <= 20; i++) {
     var id = faker.datatype.uuid();
     var title = faker.lorem.words();
     var location = faker.address.city();
@@ -25,14 +25,15 @@ function generateCasesStudies(){
       description,
     });
   }
-	 return cases;
+  return cases;
 }
 
-function generatePosts(){
-	var posts = [];
-	 for (let i = 0; i <= 20; i++) {
+function generatePosts() {
+  var posts = [];
+  for (let i = 0; i <= 20; i++) {
     var id = faker.datatype.uuid();
     var title = faker.lorem.words();
+    var author = faker.fake("{{name.lastName}}, {{name.firstName}}");
     var location = faker.address.city();
     var picture = `${faker.image.city()}?random=${Math.round(
       Math.random() * 1000
@@ -53,7 +54,7 @@ function generatePosts(){
       description,
     });
   }
-    return posts;
+  return posts;
 }
 
 function generateAPI() {
