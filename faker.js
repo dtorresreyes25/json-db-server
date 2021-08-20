@@ -1,6 +1,7 @@
 var faker = require("faker");
 
 function generateCasesStudies(){
+    const cases = [];
 	 for (let i = 0; i <= 20; i++) {
     var id = faker.datatype.uuid();
     var title = faker.lorem.words();
@@ -24,6 +25,7 @@ function generateCasesStudies(){
       description,
     });
   }
+	 return cases;
 }
 
 function generatePosts(){
@@ -50,8 +52,8 @@ function generatePosts(){
       picture,
       description,
     });
-    return posts;
   }
+    return posts;
 }
 
 function generateAPI() {
