@@ -29,6 +29,7 @@ function generateCasesStudies() {
 }
 
 function generatePosts() {
+  var random = Math.round(Math.random() * 1000);
   var posts = [];
   for (let i = 0; i <= 20; i++) {
     var id = faker.datatype.uuid();
@@ -36,9 +37,8 @@ function generatePosts() {
     var author = faker.fake("{{name.lastName}}, {{name.firstName}}");
     var location = faker.address.city();
     var date = faker.date.recent();
-    var picture = `${faker.image.city()}?random=${Math.round(
-      Math.random() * 1000
-    )}`;
+    var thumb = `${faker.image.city(100, 100)}?random=${random}}`;
+    var picture = `${faker.image.city()}?random=${random}}`;
     var description = "";
 
     Array(10)
@@ -54,6 +54,7 @@ function generatePosts() {
       date,
       location,
       picture,
+      thumb,
       description,
     });
   }
