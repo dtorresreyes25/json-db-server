@@ -7,7 +7,7 @@ function generateCasesStudies() {
     var id = faker.datatype.uuid();
     var title = faker.lorem.words();
     var location = faker.address.city();
-    var thumb = `${faker.image.nature(25, 25)}?random=${random}}`;
+    var thumb = `${faker.image.nature(6, 6)}?random=${random}}`;
     var picture = `${faker.image.nature()}?random=${random}}`;
     var description = "";
     Array(10)
@@ -37,7 +37,7 @@ function generatePosts() {
     var author = faker.fake("{{name.lastName}}, {{name.firstName}}");
     var location = faker.address.city();
     var date = faker.date.recent();
-    var thumb = `${faker.image.city(25, 25)}?random=${random}}`;
+    var thumb = `${faker.image.city(6, 6)}?random=${random}}`;
     var picture = `${faker.image.city()}?random=${random}}`;
     var description = "";
 
