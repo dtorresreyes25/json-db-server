@@ -21,6 +21,7 @@ function generateCasesStudies() {
       title,
       location,
       picture,
+      thumb,
       description,
     });
   }
