@@ -37,7 +37,7 @@ function generatePosts() {
     var author = faker.fake("{{name.lastName}}, {{name.firstName}}");
     var location = faker.address.city();
     var date = faker.date.recent();
-    var thumb = `${faker.image.city(100, 100)}?random=${random}}`;
+    var thumb = `${faker.image.city(25, 25)}?random=${random}}`;
     var picture = `${faker.image.city()}?random=${random}}`;
     var description = "";
 
