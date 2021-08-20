@@ -2,15 +2,14 @@ var faker = require("faker");
 
 function generateCasesStudies() {
   const cases = [];
-  for (let i = 0; i <= 20; i++) {
+  for (let i = 0; i <= 100; i++) {
+    var random = Math.round(Math.random() * 1000);
     var id = faker.datatype.uuid();
     var title = faker.lorem.words();
     var location = faker.address.city();
-    var picture = `${faker.image.nature()}?random=${Math.round(
-      Math.random() * 1000
-    )}`;
+    var thumb = `${faker.image.nature(25, 25)}?random=${random}}`;
+    var picture = `${faker.image.nature()}?random=${random}}`;
     var description = "";
-
     Array(10)
       .fill(null)
       .forEach((i) => {
@@ -30,7 +29,7 @@ function generateCasesStudies() {
 
 function generatePosts() {
   var posts = [];
-  for (let i = 0; i <= 20; i++) {
+  for (let i = 0; i <= 100; i++) {
     var random = Math.round(Math.random() * 1000);
     var id = faker.datatype.uuid();
     var title = faker.lorem.words();
