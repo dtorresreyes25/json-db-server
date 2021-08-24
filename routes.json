@@ -1,0 +1,5 @@
+{
+  "/api/*": "/$1",
+  "/podcasts/serie": "/serie",
+  "/podcasts/episodes": "/episodes"
+}

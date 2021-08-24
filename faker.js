@@ -61,7 +61,7 @@ function generatePosts() {
   return posts;
 }
 
-function generatePodcast() {
+function generatePodcastEpisodes() {
   const mockupTracks = [
     {
       title: "Brahms: St Anthony Chorale - Theme, Two Pianos Op.56b",
@@ -86,7 +86,6 @@ function generatePodcast() {
         "This week on Game Set Matchup, we had the pleasure of chatting to Super Connector, Nathan Kelleher, Co-founder and Director of leading investment firm True Altitude. Tune in to hear more about how Nathan went from working in logistics at the Olympics to co-founding True Altitude, the advice he would give to his younger self, and what it takes to create successful business partnerships",
     },
   ];
-
   const tracks = Array(50)
     .fill(null)
     .map((_, index) => {
@@ -97,14 +96,17 @@ function generatePodcast() {
         episode: index,
       };
     });
+  return tracks;
+}
 
+function generatePodcastSerie() {
   return {
     picture:
       "https://is4-ssl.mzstatic.com/image/thumb/Podcasts113/v4/36/8f/43/368f43a6-c97d-f69e-dcae-6c9a3f08b196/mza_3740946593757410045.png/100x100bb.jpg",
     title: "Game Set Matchup!",
     description:
       "This week on Game Set Matchup, we had the pleasure of chatting to Super Connector, Nathan Kelleher, Co-founder and Director of leading investment firm True Altitude. Tune in to hear more about how Nathan went from working in logistics at the Olympics to co-founding True Altitude, the advice he would give to his younger self, and what it takes to create successful business partnerships",
-    episodes: 2,
+    episodes: generatePodcastEpisodes().length,
     date: new Date("8/30/2015"),
     time: 8460,
     social: {
@@ -112,15 +114,20 @@ function generatePodcast() {
       apple: "http://www.apple.com/brahms/",
       google: "http://www.google.com/brahms/",
     },
-    tracks,
   };
 }
 
 function generateAPI() {
   const caseStudies = generateCasesStudies();
   const posts = generatePosts();
-  const podcast = generatePodcast();
-  return { "case-studies": caseStudies, posts, podcast };
+  const serie = generatePodcastSerie();
+  const episodes = generatePodcastEpisodes();
+  return {
+    "case-studies": caseStudies,
+    posts,
+    serie,
+    episodes,
+  };
 }
 
 module.exports = generateAPI;
